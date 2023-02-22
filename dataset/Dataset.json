@@ -1,0 +1,24 @@
+{
+	"name": "Dataset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "veeworkspace-WorkspaceDefaultStorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "stock_data.csv",
+				"folderPath": "Stock_data",
+				"fileSystem": "veecontainer"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}

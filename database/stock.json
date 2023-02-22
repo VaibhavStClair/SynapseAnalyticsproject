@@ -1,0 +1,25 @@
+{
+	"name": "stock",
+	"properties": {
+		"Name": "stock",
+		"EntityType": "DATABASE",
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"Properties": {
+			"IsSyMSCDMDatabase": true
+		},
+		"Source": {
+			"Provider": "ADLS",
+			"Location": "abfss://veecontainer@veestorage.dfs.core.windows.net/stock",
+			"Properties": {
+				"FormatType": "csv",
+				"LinkedServiceName": "veeworkspace-WorkspaceDefaultStorage"
+			}
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "444a0a4a-7e80-4bd3-bc65-98151bdb6e04"
+	},
+	"type": "DATABASE"
+}

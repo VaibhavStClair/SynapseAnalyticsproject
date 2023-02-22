@@ -1,0 +1,17 @@
+{
+	"name": "SQL script 1",
+	"properties": {
+		"content": {
+			"query": "USE result\nGO\nCREATE MASTER KEY ENCRYPTION BY PASSWORD ='Admin@098765';\n\nCREATE DATABASE SCOPED CREDENTIAL demo\nWITH IDENTITY = 'SHARED ACCESS SIGNATURE', \nSECRET = 'sv=2021-06-08&ss=bfqt&srt=sco&sp=rwdlacupyx&se=2023-02-15T05:37:17Z&st=2023-02-14T21:37:17Z&spr=https&sig=%2FS3nZTtmHIthP7bVOlQOWCQwbZGz43AlIHAV9mB4oVY%3D'\nGO\nCREATE EXTERNAL DATA SOURCE demo WITH\n(\n\tLOCATION = 'https://veestorage.blob.core.windows.net/',\n\tCREDENTIAL = demo\n)\n\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "result",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

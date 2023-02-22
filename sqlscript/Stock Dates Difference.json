@@ -1,0 +1,17 @@
+{
+	"name": "Stock Dates Difference",
+	"properties": {
+		"content": {
+			"query": "SELECT TOP 10 [Date]\n,[Difference]\n FROM [stock].[dbo].[stockdifference] order by date desc",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "stock",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

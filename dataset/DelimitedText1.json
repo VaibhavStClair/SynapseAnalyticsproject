@@ -1,0 +1,58 @@
+{
+	"name": "DelimitedText1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_adls_veestrorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "stock_data.csv",
+				"folderPath": "Stock_data",
+				"container": "veecontainer"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Prop_0",
+				"type": "String"
+			},
+			{
+				"name": "Date",
+				"type": "String"
+			},
+			{
+				"name": "Open",
+				"type": "String"
+			},
+			{
+				"name": "High",
+				"type": "String"
+			},
+			{
+				"name": "Low",
+				"type": "String"
+			},
+			{
+				"name": "Close",
+				"type": "String"
+			},
+			{
+				"name": "Adj Close",
+				"type": "String"
+			},
+			{
+				"name": "Volume",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}
